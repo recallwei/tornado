@@ -1,1 +1,1 @@
-# template-repo
+# vue-startup-project
