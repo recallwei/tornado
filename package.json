@@ -32,6 +32,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^20.0.1",
     "@types/node": "^18.11.16",
+    "@typescript-eslint/parser": "^5.47.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
