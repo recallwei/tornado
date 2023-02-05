@@ -3,11 +3,6 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
   root: true,
-  env: {
-    browser: true,
-    node: true,
-    es2021: true
-  },
   globals: {},
   extends: [
     "plugin:vue/vue3-recommended",
@@ -26,13 +21,9 @@ module.exports = {
     "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
     "import/extensions": "off",
     "import/prefer-default-export": "off",
-    "import/newline-after-import": "off"
+    "import/newline-after-import": "off",
+    "import/no-absolute-path": "off", // import ./public
+    "import/no-unresolved": "off",
+    "no-unused-vars": "off" // use @typescript-eslint/no-unused-vars to check. (warnng level)
   },
-  settings: {
-    "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
-      }
-    }
-  }
 }
