@@ -24,7 +24,7 @@ export default defineConfig({
     open: false, // 是否自动打开浏览器，如果是字符串，则会被当作 URL 的路径名
     proxy: {
       "/api-prefix": {
-        target: "localhost:5173",
+        target: "localhost:3000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-prefix/, "")
       }

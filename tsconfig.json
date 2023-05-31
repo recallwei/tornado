@@ -1,14 +1,35 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "app.config.ts",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "vite.config.*"
+  ],
+  "exclude": ["src/**/__tests__/*", "dist", "node_modules"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["node", "jsdom"],
+    "target": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "noImplicitThis": true,
+    "isolatedModules": true,
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     }
-  ]
+  }
 }

@@ -8,6 +8,7 @@ VST (Vue Starter Template) 是一个固执己见的 `Vue 3/TypeScript` 启动模
 - 使用 Tailwind CSS，基于原子化 CSS 进行快速开发
 - 使用 Vue Router 进行路由管理
 - 使用 Pinia 进行全局状态管理
+- 使用 Axios 进行请求管理
 - 使用 ESLint, Prettier, Husky, lintstaged, Code Spell Check, commitlint, editorconfig 进行前端工程化配置
 - 部署在 Vercel 上，零配置
 
