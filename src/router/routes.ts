@@ -8,5 +8,13 @@ export const routes = [
     name: 'home',
     component: () => import('@/views/Home'),
     meta: { title: AppName }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'not-found',
+    component: () => import('@/views/NotFound'),
+    meta: {
+      title: '404'
+    }
   }
 ]
