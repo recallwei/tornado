@@ -1,2 +1,9 @@
+degit
 esbuild
+noopenner
+noreferrer
+nprogress
 Pinia
+tailwindcss
+unplugin
+vueuse

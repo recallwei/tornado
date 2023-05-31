@@ -1,9 +1,7 @@
-import dayjs from "dayjs"
-import { TimeFormatter } from "./time.type"
+import dayjs from 'dayjs'
 
-export const formatTime = (
-  time: string | number | Date,
-  format: TimeFormatter = "YYYY-MM-DD HH:mm:ss"
-) => {
+import type { TimeFormatter } from './time.type'
+
+export const formatTime = (time: string | number | Date, format: TimeFormatter = 'YYYY-MM-DD HH:mm:ss') => {
   return dayjs(time).format(format)
 }

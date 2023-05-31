@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
   "language": "en",
   "words": [],
@@ -12,19 +13,14 @@
     }
   ],
   "ignorePaths": [
-    "./dist",
-    "src/main.ts",
-    "public/*",
-    "src/assets/*",
+    ".cspell",
+    ".vscode",
+    ".vercel",
+    "dist",
+    "build",
     "node_modules",
-    "package.json",
-    ".cspell.json",
-    ".commitlintrc.json",
-    ".eslintrc.js",
-    ".prettierrc.json",
-    ".stylelintrc.json",
+    "public",
     "pnpm-lock.yaml",
-    "README.md",
-    "custom-words.txt"
+    "README.md"
   ]
 }

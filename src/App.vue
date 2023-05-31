@@ -1,10 +1,27 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router"
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
-  <img src="http://localhost:3000/storage/d132fa9c-a4e1-4c60-b3c1-dcf54d288e13.png" />
+  <RouterView v-slot="{ Component }">
+    <Transition
+      name="router"
+      mode="out-in"
+    >
+      <KeepAlive>
+        <component :is="Component" />
+      </KeepAlive>
+    </Transition>
+  </RouterView>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.router-enter-active,
+.router-leave-active {
+  transition: opacity 0.3s ease;
+}
+.router-enter-from,
+.router-leave-to {
+  opacity: 0;
+}
+</style>

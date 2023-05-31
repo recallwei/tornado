@@ -1,3 +1,6 @@
+.cspell
+.husk
 build
-public
+dist
 node_modules
+public

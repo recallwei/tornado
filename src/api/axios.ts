@@ -58,10 +58,10 @@
 
 // export { axiosService }
 
-import axios, { InternalAxiosRequestConfig } from "axios"
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
+import axios from 'axios'
 
-const LOCAL_STORAGE_TOKEN = "access_token"
+const LOCAL_STORAGE_TOKEN = 'access_token'
 
 class Request {
   instance: AxiosInstance

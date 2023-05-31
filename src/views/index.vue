@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main />
+  <main class="h-full w-full bg-red-50" />
 </template>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
