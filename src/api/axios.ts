@@ -1,72 +1,33 @@
-// import { i18n } from "@i18n"
-// import { LOCAL_STORAGE_TOKEN } from "@constants"
-// import { store, requestAction } from "@store"
-// import { useEffect } from "react"
-
-// // Axios instance
-// const axiosService = axios.create({
-//   baseURL: import.meta.env.VITE_BRUCE_WORLD_BASE_URL,
-//   withCredentials: false,
-//   timeout: 30000
-// })
-
-// function nav() {
-//   const navigate = useNavigate()
-//   useEffect(() => {
-//     console.log(1)
-//     navigate("/login")
-//   }, [])
-// }
-
-// // Request interceptors
-// axiosService.interceptors.request.use(
-//   (config: any) => {
-//     store.dispatch(requestAction.updateRequestState(true))
-//     const token = localStorage.getItem(LOCAL_STORAGE_TOKEN)
-//     if (token) {
-//       config.headers.common.Authorization = `Bearer ${token}`
-//     }
-//     return config
-//   },
-//   (error) => Promise.reject(error)
-// )
-
-// // Response interceptors
-// axiosService.interceptors.response.use(
-//   (response) => {
-//     store.dispatch(requestAction.updateRequestState(false))
-//     return response
-//   },
-//   (error) => {
-//     if (error.message === "timeout of 10000ms exceeded") {
-//       console.error(i18n.t("request:RESPONSE.ERROR.TIMEOUT"))
-//     } else if (error.response?.status === 401) {
-//       console.error(`401: ${error.message}`)
-//       localStorage.removeItem(LOCAL_STORAGE_TOKEN)
-//       location.href = "/login"
-//     } else if (error.response?.status === 400) {
-//       console.error(`400: ${error.message}`)
-//     } else if (error.response?.status === 404) {
-//       console.error(`404: ${error.message}`)
-//       location.href = "/notfound"
-//     } else {
-//       console.error(error.message)
-//     }
-//     return Promise.reject(error)
-//   }
-// )
-
-// export { axiosService }
-
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
+import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
+import { useRouter } from 'vue-router'
+
+import type { PageResponseData, ResponseData } from '@/types'
 
 const LOCAL_STORAGE_TOKEN = 'access_token'
+
+const router = useRouter()
+
+const axiosConfig = {
+  baseURL: import.meta.env.BASE_URL,
+  timeout: 30000,
+  withCredentials: true
+}
+
+enum ResponseStatusCode {
+  SUCCESS = 200,
+  BAD_REQUEST = 400,
+  UNAUTHORIZED = 401,
+  FORBIDDEN = 403,
+  NOT_FOUND = 404,
+  CONFLICT = 409,
+  INTERNAL_SERVER_ERROR = 500
+}
 
 class Request {
   instance: AxiosInstance
 
-  constructor(config: AxiosRequestConfig) {
+  public constructor(config: AxiosRequestConfig) {
     this.instance = axios.create(config)
 
     this.instance.interceptors.request.use(
@@ -82,15 +43,64 @@ class Request {
 
     this.instance.interceptors.response.use(
       (res: AxiosResponse) => {
-        return res.data
+        return res
       },
-      (err: any) => Promise.reject(err)
+      (err: AxiosError) => {
+        const { response } = err
+        if (response) {
+          Request.handleCode(response.status)
+        }
+        if (!window.navigator.onLine) {
+          console.error('网络连接失败')
+          router.replace('/404')
+        }
+        Promise.reject(err)
+      }
     )
+  }
+
+  static handleCode(code: number): void {
+    switch (code) {
+      case ResponseStatusCode.BAD_REQUEST:
+        console.error('Bad Request')
+        break
+      case ResponseStatusCode.UNAUTHORIZED:
+        localStorage.removeItem(LOCAL_STORAGE_TOKEN)
+        router.replace('/login')
+        break
+      case ResponseStatusCode.FORBIDDEN:
+        router.replace('/403')
+        break
+      case ResponseStatusCode.NOT_FOUND:
+        router.replace('/404')
+        break
+      case ResponseStatusCode.CONFLICT:
+        console.error('Conflict')
+        break
+      default:
+        console.error('Internal Server Error')
+    }
   }
 
   request(config: AxiosRequestConfig) {
     return this.instance.request(config)
   }
+
+  get<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T> | PageResponseData<T>> {
+    return this.instance.get(url, { params })
+  }
+
+  post<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
+    return this.instance.post(url, params)
+  }
+
+  put<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
+    return this.instance.put(url, params)
+  }
+
+  delete<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
+    return this.instance.delete(url, { params })
+  }
 }
 
-export default Request
+export default new Request(axiosConfig)

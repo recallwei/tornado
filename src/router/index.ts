@@ -9,7 +9,8 @@ NProgress.configure({ showSpinner: false })
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior: () => ({ left: 0, top: 0 })
 })
 
 const processTargetRoute = (to: RouteLocationNormalized) => {
