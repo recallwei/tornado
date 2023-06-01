@@ -3,7 +3,7 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["node", "jsdom"],
+    "types": ["node", "jsdom", "unplugin-icons/types/vue"],
     "target": "ESNext",
     "strict": true,
     "esModuleInterop": true,

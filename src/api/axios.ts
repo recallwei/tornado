@@ -1,12 +1,10 @@
 import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
-import { useRouter } from 'vue-router'
 
-import type { PageResponseData, ResponseData } from '@/types'
+import router from '@/router'
+import type { PageModel, PageResponseData, ResponseData } from '@/types'
 
 const LOCAL_STORAGE_TOKEN = 'access_token'
-
-const router = useRouter()
 
 const axiosConfig = {
   baseURL: import.meta.env.BASE_URL,
@@ -86,20 +84,36 @@ class Request {
     return this.instance.request(config)
   }
 
-  get<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T> | PageResponseData<T>> {
-    return this.instance.get(url, { params })
+  get<T>(
+    url: string,
+    params?: Record<string, unknown> | PageModel,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<ResponseData<T> | PageResponseData<T>>> {
+    return this.instance.get(url, { params, ...config })
   }
 
-  post<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
-    return this.instance.post(url, params)
+  post<T>(
+    url: string,
+    data?: Record<string, unknown>,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<ResponseData<T>>> {
+    return this.instance.post(url, data, config)
   }
 
-  put<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
-    return this.instance.put(url, params)
+  put<T>(
+    url: string,
+    data?: Record<string, unknown>,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<ResponseData<T>>> {
+    return this.instance.put(url, data, config)
   }
 
-  delete<T>(url: string, params?: Record<string, unknown>): Promise<ResponseData<T>> {
-    return this.instance.delete(url, { params })
+  delete<T>(
+    url: string,
+    params?: Record<string, unknown>,
+    config?: AxiosRequestConfig
+  ): Promise<AxiosResponse<ResponseData<T>>> {
+    return this.instance.delete(url, { params, ...config })
   }
 }
 

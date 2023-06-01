@@ -14,8 +14,8 @@ const router = createRouter({
 })
 
 const processTargetRoute = (to: RouteLocationNormalized) => {
-  const { AppName } = siteMetaData
-  document.title = to.path === '/' ? AppName : `${to.meta.title} - ${AppName}` // Change the title of the document
+  const { appName } = siteMetaData
+  document.title = to.path === '/' ? appName : `${to.meta.title} - ${appName}` // Change the title of the document
 }
 
 router.beforeEach((to, from, next) => {
@@ -25,6 +25,8 @@ router.beforeEach((to, from, next) => {
   processTargetRoute(to)
   next()
 })
-router.afterEach(() => NProgress.done())
+router.afterEach(() => {
+  NProgress.done()
+})
 
 export default router

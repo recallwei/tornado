@@ -1,5 +1,7 @@
 degit
 esbuild
+iconify
+nocheck
 noopenner
 noreferrer
 nprogress

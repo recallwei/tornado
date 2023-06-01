@@ -1,6 +1,6 @@
 import { siteMetaData } from '@/constants'
 
-const { AppName } = siteMetaData
+const { appName } = siteMetaData
 
 export const routes = [
   {
@@ -8,7 +8,7 @@ export const routes = [
     name: 'home',
     component: () => import('@/views/Home'),
     meta: {
-      title: AppName
+      title: appName
     }
   },
   {
@@ -25,6 +25,14 @@ export const routes = [
     component: () => import('@/views/Signup'),
     meta: {
       title: 'signup'
+    }
+  },
+  {
+    path: '/api',
+    name: 'api',
+    component: () => import('@/views/API'),
+    meta: {
+      title: 'API'
     }
   },
   {

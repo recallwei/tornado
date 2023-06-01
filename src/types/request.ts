@@ -16,3 +16,8 @@ interface PageResponse extends Response {
 export interface PageResponseData<T = any> extends PageResponse {
   data: T
 }
+
+export interface PageModel {
+  pageNum: number
+  pageSize: number
+}
