@@ -41,7 +41,7 @@ class Request {
 
     this.instance.interceptors.response.use(
       (res: AxiosResponse) => {
-        return res
+        return res.data
       },
       (err: AxiosError) => {
         const { response } = err
@@ -49,10 +49,10 @@ class Request {
           Request.handleCode(response.status)
         }
         if (!window.navigator.onLine) {
-          console.error('网络连接失败')
+          console.error('Network Error!')
           router.replace('/404')
         }
-        Promise.reject(err)
+        return Promise.reject(err)
       }
     )
   }
@@ -60,23 +60,23 @@ class Request {
   static handleCode(code: number): void {
     switch (code) {
       case ResponseStatusCode.BAD_REQUEST:
-        console.error('Bad Request')
+        console.error('Bad Request!')
         break
       case ResponseStatusCode.UNAUTHORIZED:
         localStorage.removeItem(LOCAL_STORAGE_TOKEN)
         router.replace('/login')
         break
       case ResponseStatusCode.FORBIDDEN:
-        router.replace('/403')
+        console.warn('Forbidden!')
         break
       case ResponseStatusCode.NOT_FOUND:
-        router.replace('/404')
+        console.warn('NotFound!')
         break
       case ResponseStatusCode.CONFLICT:
-        console.error('Conflict')
+        console.error('Conflict!')
         break
       default:
-        console.error('Internal Server Error')
+        console.error('Internal Server Error!')
     }
   }
 
@@ -88,31 +88,19 @@ class Request {
     url: string,
     params?: Record<string, unknown> | PageModel,
     config?: AxiosRequestConfig
-  ): Promise<AxiosResponse<ResponseData<T> | PageResponseData<T>>> {
+  ): Promise<ResponseData<T> | PageResponseData<T>> {
     return this.instance.get(url, { params, ...config })
   }
 
-  post<T>(
-    url: string,
-    data?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ): Promise<AxiosResponse<ResponseData<T>>> {
+  post<T>(url: string, data?: Record<string, unknown>, config?: AxiosRequestConfig): Promise<ResponseData<T>> {
     return this.instance.post(url, data, config)
   }
 
-  put<T>(
-    url: string,
-    data?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ): Promise<AxiosResponse<ResponseData<T>>> {
+  put<T>(url: string, data?: Record<string, unknown>, config?: AxiosRequestConfig): Promise<ResponseData<T>> {
     return this.instance.put(url, data, config)
   }
 
-  delete<T>(
-    url: string,
-    params?: Record<string, unknown>,
-    config?: AxiosRequestConfig
-  ): Promise<AxiosResponse<ResponseData<T>>> {
+  delete<T>(url: string, params?: Record<string, unknown>, config?: AxiosRequestConfig): Promise<ResponseData<T>> {
     return this.instance.delete(url, { params, ...config })
   }
 }

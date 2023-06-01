@@ -1,5 +1,6 @@
 degit
 esbuild
+icones
 iconify
 nocheck
 noopenner

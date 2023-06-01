@@ -11,7 +11,7 @@ VST (Vue Starter Template) 是一个固执己见的 `Vue 3/TypeScript` 启动模
 - [x] 使用 Vue Router 进行路由管理
 - [x] 使用 Pinia 进行全局状态管理
 - [x] 使用 Axios 进行请求管理
-- [x] 使用 iconify/json 和 unplugin-icons 进行图标管理
+- [x] 使用 iconify/json 和 unplugin-icons 进行图标管理，可以通过 icones 快速使用
 - [x] 使用 unplugin-auto-import 和 unplugin-vue-components 进行自动引入，解放双手
 - [ ] 使用 ESLint, Prettier, Husky, lintstaged, Code Spell Check, commitlint, editorconfig 进行前端工程化配置
 - [x] 部署在 Vercel 上，零配置
@@ -52,6 +52,8 @@ pnpm i
 - [ ] 删除冗余的路由
 - [ ] 修改 `index.html` 中的站点元信息
 - [ ] 移除 `/src/assets/images` 下的图标图片
+- [ ] 删除 `/src/api` 下的示例 API
+- [ ] 修改 `/src/store` 下的示例全局状态
 
 ## 使用
 

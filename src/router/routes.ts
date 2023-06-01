@@ -12,19 +12,11 @@ export const routes = [
     }
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/Login'),
+    path: '/store',
+    name: 'store',
+    component: () => import('@/views/Store'),
     meta: {
-      title: 'Login'
-    }
-  },
-  {
-    path: '/signup',
-    name: 'signup',
-    component: () => import('@/views/Signup'),
-    meta: {
-      title: 'signup'
+      title: 'Store'
     }
   },
   {
@@ -33,14 +25,6 @@ export const routes = [
     component: () => import('@/views/API'),
     meta: {
       title: 'API'
-    }
-  },
-  {
-    path: '/403',
-    name: 'forbidden',
-    component: () => import('@/views/Forbidden'),
-    meta: {
-      title: '403'
     }
   },
   {

@@ -15,7 +15,7 @@ const router = createRouter({
 
 const processTargetRoute = (to: RouteLocationNormalized) => {
   const { appName } = siteMetaData
-  document.title = to.path === '/' ? appName : `${to.meta.title} - ${appName}` // Change the title of the document
+  document.title = to.path === '/' ? appName : `${to.meta.title} | ${appName}` // Change the title of the document
 }
 
 router.beforeEach((to, from, next) => {

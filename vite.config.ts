@@ -22,6 +22,7 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
+        'pinia',
         {
           '@vueuse/core': ['useToggle', 'useEventListener', 'useDebounceFn']
         },
@@ -57,7 +58,7 @@ export default defineConfig({
     open: false,
     proxy: {
       '/api-prefix': {
-        target: 'localhost:3000',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-prefix/, '')
       }
