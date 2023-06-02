@@ -45,15 +45,16 @@ pnpm i
 
 - [ ] 在 `LICENSE` 中改变作者名
 - [ ] 在 `package.json` 中改变配置
-- [ ] 在 `.env` 中修改环境变量
-- [ ] 在 `/public` 目录下更改 `favicon.ico`
-- [ ] 在 `vite.config.ts` 更改主机名
 - [ ] 整理 `README.md`
-- [ ] 删除冗余的路由
 - [ ] 修改 `index.html` 中的站点元信息
+- [ ] 在 `/public` 目录下更改 `favicon.ico`
+- [ ] 在 `.env` 中修改环境变量
+- [ ] 在 `vite.config.ts` 更改接口代理
+- [ ] 移除 `/src/views` 下的示例页面
+- [ ] 移除 `/src/router/routes.ts` 中冗余的路由
 - [ ] 移除 `/src/assets/images` 下的图标图片
-- [ ] 删除 `/src/api` 下的示例 API
-- [ ] 修改 `/src/store` 下的示例全局状态
+- [ ] 移除 `/src/api` 下的示例 API
+- [ ] 移除 `/src/store` 下的示例全局状态
 
 ## 使用
 
