@@ -1,12 +1,16 @@
+commitlint
 degit
 esbuild
 icones
 iconify
+lintstaged
 nocheck
 noopenner
 noreferrer
 nprogress
 Pinia
+recallwei
+rushstack
 tailwindcss
 unplugin
 vueuse

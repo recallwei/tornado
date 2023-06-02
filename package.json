@@ -1,8 +1,8 @@
 {
   "private": true,
   "name": "vst",
-  "version": "1.0.0",
-  "description": "VST (Vue 3 Starter Template) is an opinionated Vue 3/TypeScirpt/Vue Router/Pinia starter template.",
+  "version": "0.0.1",
+  "description": "VST (Vue 3 Starter Template) is an opinionated Vue 3/TypeScript/Vue Router/Pinia starter template.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "keywords": [
     "vue",
