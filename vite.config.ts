@@ -1,32 +1,66 @@
-import { fileURLToPath, URL } from "node:url"
+import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
-import vueJsx from "@vitejs/plugin-vue-jsx"
+import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Icons from 'unplugin-icons/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // 应用的路径
-  plugins: [vue(), vueJsx()],
+  base: '/',
+  plugins: [
+    vue(),
+    AutoImport({
+      dts: true,
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/ // .md
+      ],
+      imports: [
+        'vue',
+        'vue-router',
+        'pinia',
+        {
+          '@vueuse/core': ['useToggle', 'useEventListener', 'useDebounceFn']
+        },
+        {
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
+        },
+        {
+          from: 'naive-ui',
+          imports: ['FormInst', 'FormRules', 'UploadFileInfo', 'UploadCustomRequestOptions'],
+          type: true
+        }
+      ]
+    }),
+    Components({
+      dts: true,
+      resolvers: [NaiveUiResolver()]
+    }),
+    Icons({ autoInstall: true })
+  ],
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".vue"]
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   esbuild: {
-    drop: ["console", "debugger"]
+    drop: ['console', 'debugger']
   },
   server: {
     host: true,
-    port: 5173, // 应用端口号
-    strictPort: true, // 端口被占用时，终止应用服务
-    open: false, // 是否自动打开浏览器，如果是字符串，则会被当作 URL 的路径名
+    port: 5173,
+    strictPort: true,
+    open: false,
     proxy: {
-      "/api-prefix": {
-        target: "localhost:5173",
+      '/api-prefix': {
+        target: 'http://localhost:3000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api-prefix/, "")
+        rewrite: (path) => path.replace(/^\/api-prefix/, '')
       }
     }
   }
