@@ -18,9 +18,10 @@
     "build": "run-p check:type build-only",
     "preview": "vite preview",
     "build-only": "vite build",
-    "check:type": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "check:spell": "npx cspell '**'",
-    "check:eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "cspell:check": "npx cspell '**'",
+    "cspell:sort": "node ./scripts/cspell-sort.js",
+    "eslint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "type:check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "prepare": "husky install"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
-.cspell
-.husk
-build
-dist
 node_modules
-public
+/.cspell
+/.husky
+/build
+/dist
+/public
