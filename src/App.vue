@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { dateZhCN, lightTheme, zhCN } from 'naive-ui'
+import { useThemeStore } from '@/store'
+
+const themeStore = useThemeStore()
 </script>
 
 <template>
   <NConfigProvider
-    :locale="zhCN"
-    :date-locale="dateZhCN"
-    :theme="lightTheme"
+    :locale="themeStore.locale"
+    :date-locale="themeStore.dateLocale"
+    :theme="themeStore.theme"
   >
     <NLoadingBarProvider>
       <NMessageProvider>

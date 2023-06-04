@@ -8,6 +8,7 @@ declare global {
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
+  const createDiscreteApi: typeof import('naive-ui')['createDiscreteApi']
   const createPinia: typeof import('pinia')['createPinia']
   const customRef: typeof import('vue')['customRef']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
@@ -86,5 +87,5 @@ declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, InjectionKey, PropType, Ref, VNode } from 'vue'
   // @ts-ignore
-  export type { FormInst, FormRules, UploadFileInfo, UploadCustomRequestOptions } from 'naive-ui'
+  export type { FormInst, FormRules, UploadFileInfo, UploadCustomRequestOptions, ConfigProviderProps } from 'naive-ui'
 }

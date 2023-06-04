@@ -61,6 +61,7 @@ pnpm i
 - [ ] 修改 `index.html` 中的站点元数据
 - [ ] 在 `/public` 目录下更改 `favicon.ico`
 - [ ] 在 `vite.config.ts` 更改接口代理
+- [ ] 更改 `/src/app.config.ts` 中的站点配置
 - [ ] 移除 `/src/api` 下的示例 API
 - [ ] 移除 `/src/assets/images` 下的图标图片
 - [ ] 移除 `/src/router/routes.ts` 中冗余的路由

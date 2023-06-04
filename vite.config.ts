@@ -7,7 +7,7 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   base: '/',
   plugins: [
     vue(),
@@ -27,11 +27,11 @@ export default defineConfig({
           '@vueuse/core': ['useToggle', 'useEventListener', 'useDebounceFn']
         },
         {
-          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
+          'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar', 'createDiscreteApi']
         },
         {
           from: 'naive-ui',
-          imports: ['FormInst', 'FormRules', 'UploadFileInfo', 'UploadCustomRequestOptions'],
+          imports: ['FormInst', 'FormRules', 'UploadFileInfo', 'UploadCustomRequestOptions', 'ConfigProviderProps'],
           type: true
         }
       ]
@@ -49,7 +49,7 @@ export default defineConfig({
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   esbuild: {
-    drop: ['console', 'debugger']
+    drop: mode === 'production' ? ['console', 'debugger'] : []
   },
   server: {
     host: true,
@@ -64,4 +64,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))

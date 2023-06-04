@@ -2,7 +2,18 @@ import type { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse, Inte
 import axios from 'axios'
 
 import router from '@/router'
+import { useThemeStore } from '@/store'
 import type { PageModel, PageResponseData, ResponseData } from '@/types'
+
+const themeStore = useThemeStore()
+
+const { message } = createDiscreteApi(['message'], {
+  configProviderProps: {
+    theme: themeStore.theme,
+    locale: themeStore.locale,
+    dateLocale: themeStore.dateLocale
+  }
+})
 
 const LOCAL_STORAGE_TOKEN = 'access_token'
 
@@ -36,13 +47,11 @@ class Request {
         }
         return req
       },
-      (err: any) => Promise.reject(err)
+      (err: AxiosError) => Promise.reject(err)
     )
 
     this.instance.interceptors.response.use(
-      (res: AxiosResponse) => {
-        return res.data
-      },
+      (res: AxiosResponse) => res.data,
       (err: AxiosError) => {
         const { response } = err
         if (response) {
@@ -52,7 +61,7 @@ class Request {
           console.error('Network Error!')
           router.replace('/404')
         }
-        return Promise.reject(err)
+        return Promise.reject(response)
       }
     )
   }
@@ -60,23 +69,26 @@ class Request {
   static handleCode(code: number): void {
     switch (code) {
       case ResponseStatusCode.BAD_REQUEST:
-        console.error('Bad Request!')
+        console.error('400: Bad Request!')
         break
       case ResponseStatusCode.UNAUTHORIZED:
         localStorage.removeItem(LOCAL_STORAGE_TOKEN)
-        router.replace('/login')
+        console.error('401: Unauthorized!')
+        message.error('401: Unauthorized!')
         break
       case ResponseStatusCode.FORBIDDEN:
-        console.warn('Forbidden!')
+        console.error('403: Forbidden!')
+        message.error('403: Forbidden!')
         break
       case ResponseStatusCode.NOT_FOUND:
-        console.warn('NotFound!')
+        console.error('404: NotFound!')
         break
       case ResponseStatusCode.CONFLICT:
-        console.error('Conflict!')
+        console.error('409: Conflict!')
         break
       default:
-        console.error('Internal Server Error!')
+        console.error('500: Internal Server Error!')
+        message.error('500: Internal Server Error!')
     }
   }
 

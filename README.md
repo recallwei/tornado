@@ -61,6 +61,7 @@ When using this template, try to update your own information correctly according
 - [ ] Modify the site meta data in `index.html`
 - [ ] Change `favicon.ico` in the `/public` directory
 - [ ] Change the interface proxy in `vite.config.ts`
+- [ ] Change the site meta data in `src/app.config.ts`
 - [ ] Delete the example API in the `src/api` directory
 - [ ] Delete the example images in the `src/assets/images` directory
 - [ ] Delete the example route in the `src/router` directory

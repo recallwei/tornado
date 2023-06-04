@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AxiosResponse } from 'axios'
+
 import type { User } from '@/api'
 import { UserApi } from '@/api'
 import { useLoading } from '@/hooks'
@@ -13,6 +15,9 @@ onMounted(() => {
   UserApi.getUsers()
     .then((res) => {
       users.value = res.data
+    })
+    .catch((err: AxiosResponse) => {
+      console.log(err)
     })
     .finally(() => loadingDispatcher.loaded())
 })
