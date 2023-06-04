@@ -1,14 +1,28 @@
+<script setup lang="ts">
+import { dateZhCN, lightTheme, zhCN } from 'naive-ui'
+</script>
+
 <template>
-  <RouterView v-slot="{ Component }">
-    <Transition
-      name="router"
-      mode="out-in"
-    >
-      <KeepAlive>
-        <component :is="Component" />
-      </KeepAlive>
-    </Transition>
-  </RouterView>
+  <NConfigProvider
+    :locale="zhCN"
+    :date-locale="dateZhCN"
+    :theme="lightTheme"
+  >
+    <NLoadingBarProvider>
+      <NMessageProvider>
+        <RouterView v-slot="{ Component }">
+          <Transition
+            name="router"
+            mode="out-in"
+          >
+            <KeepAlive>
+              <component :is="Component" />
+            </KeepAlive>
+          </Transition>
+        </RouterView>
+      </NMessageProvider>
+    </NLoadingBarProvider>
+  </NConfigProvider>
 </template>
 
 <style scoped lang="scss">

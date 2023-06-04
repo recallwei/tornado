@@ -133,6 +133,9 @@ devDependencies:
   unplugin-vue-components:
     specifier: ^0.25.0
     version: 0.25.0(vue@3.3.4)
+  vfonts:
+    specifier: ^0.0.3
+    version: 0.0.3
   vite:
     specifier: ^4.3.9
     version: 4.3.9(@types/node@20.2.5)(sass@1.62.1)
@@ -5106,6 +5109,10 @@ packages:
     dependencies:
       evtd: 0.2.4
       vue: 3.3.4
+    dev: true
+
+  /vfonts@0.0.3:
+    resolution: {integrity: sha512-nguyw8L6Un8eelg1vQ31vIU2ESxqid7EYmy8V+MDeMaHBqaRSkg3dTBToC1PR00D89UzS/SLkfYPnx0Wf23IQQ==}
     dev: true
 
   /vite@4.3.9(@types/node@20.2.5)(sass@1.62.1):

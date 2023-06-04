@@ -1,19 +1,27 @@
 # VST
 
-VST (Vue Starter Template) 是一个固执己见的 `Vue 3/TypeScript` 启动模板项目.
+[English](./README.md) / 简体中文
+
+VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` 的模板项目.
 
 ## 特性
 
-- [x] 基于 [Vue 3](https://cn.vuejs.org/), [Vite](https://cn.vitejs.dev/), [TypeScript](https://www.typescriptlang.org/), [pnpm](https://pnpm.io/zh/)
-- [x] 使用 Naive UI 作为 UI 框架
-- [x] 使用 Tailwind CSS，基于原子化 CSS 进行快速开发
-- [x] 使用 Sass 进行 CSS 预处理
+- [x] 基于 [Vue 3](https://cn.vuejs.org/), [Vite](https://cn.vitejs.dev/), [pnpm](https://pnpm.io/zh/)
+- [x] [TypeScript](https://www.typescriptlang.org/)，当然
+- [x] 使用 [Naive UI](https://www.naiveui.com/) 作为 UI 框架
+- [x] 使用 [Tailwind CSS](https://tailwindcss.com/)，基于原子化 CSS 进行快速开发
+- [x] 使用 [Sass](https://sass-lang.com/) 进行 CSS 预处理
 - [x] 使用 Vue Router 进行路由管理
 - [x] 使用 Pinia 进行全局状态管理
 - [x] 使用 Axios 进行请求管理
 - [x] 使用 iconify/json 和 unplugin-icons 进行图标管理，可以通过 icones 快速使用
 - [x] 使用 unplugin-auto-import 和 unplugin-vue-components 进行自动引入，解放双手
-- [ ] 使用 ESLint, Prettier, Husky, lintstaged, Code Spell Check, commitlint, editorconfig 进行前端工程化配置
+- [x] 使用 `ESLint` 执行代码检查
+- [x] 使用 `Prettier` 执行代码格式化
+- [x] 使用 `cspell` 执行代码拼写检查
+- [x] 使用 `Husky`，`lint-staged` 和 `commitlint` 进行 Git 提交管理
+- [ ] 使用 `Docker` 和 `Docker Compose` 进行容器化
+- [x] 使用 `@/*` 作为绝对路径
 - [x] 部署在 Vercel 上，零配置
 
 ## 技术栈
@@ -21,6 +29,7 @@ VST (Vue Starter Template) 是一个固执己见的 `Vue 3/TypeScript` 启动模
 - [Vue 3](https://cn.vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://cn.vitejs.dev/)
+- [Naive UI](https://www.naiveui.com/)
 - [Sass](https://sass-lang.com/)
 
 ## 开始使用
@@ -43,20 +52,35 @@ pnpm i
 
 ## 清单
 
-- [ ] 在 `LICENSE` 中改变作者名
-- [ ] 在 `package.json` 中改变配置
+使用此模板时，请尝试按照清单正确更新您自己的信息：
+
 - [ ] 整理 `README.md`
-- [ ] 修改 `index.html` 中的站点元信息
+- [ ] 修改 `LICENSE` 中的作者名
+- [ ] 修改 `package.json` 中的项目名称、描述、作者等信息
+- [ ] 在 `.env` 中修改环境变量，删除示例环境变量 `.env.example`
+- [ ] 修改 `index.html` 中的站点元数据
 - [ ] 在 `/public` 目录下更改 `favicon.ico`
-- [ ] 在 `.env` 中修改环境变量
 - [ ] 在 `vite.config.ts` 更改接口代理
-- [ ] 移除 `/src/views` 下的示例页面
-- [ ] 移除 `/src/router/routes.ts` 中冗余的路由
-- [ ] 移除 `/src/assets/images` 下的图标图片
 - [ ] 移除 `/src/api` 下的示例 API
+- [ ] 移除 `/src/assets/images` 下的图标图片
+- [ ] 移除 `/src/router/routes.ts` 中冗余的路由
+- [ ] 移除 `/src/views` 下的示例页面
 - [ ] 移除 `/src/store` 下的示例全局状态
 
+## 注意
+
+- xxx
+
 ## 使用
+
+### 环境
+
+- Node.js >=16.14.0
+- pnpm
+
+### 配置环境变量
+
+配置 `.env` 文件，参考 [.env.example](./.env.example).
 
 ### 安装
 
