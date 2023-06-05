@@ -20,7 +20,7 @@ VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tai
 - [x] [Prettier](https://prettier.io/) for code formatting
 - [x] [cspell] for code spell checking
 - [x] [Husky](https://typicode.github.io/husky/#/) and [lint- [x] staged] and [commitlint] for Git commit management
-- [] [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) for containerization
+- [ ] [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) for containerization
 - [x] Use `@/*` as absolute path
 - [x] Deploy on Vercel, zero config
 
