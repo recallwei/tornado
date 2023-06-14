@@ -10,16 +10,16 @@ VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tai
 - [x] [TypeScript](https://www.typescriptlang.org/), of course
 - [x] [Naive UI](https://www.naiveui.com/) as UI framework
 - [x] [Tailwind CSS](https://tailwindcss.com/) for rapid development based on atomic CSS
-- [x] [Sass](https://sass- [x] lang.com/) for CSS pre- [x] processing
+- [x] [Sass](https://sass-lang.com/) for CSS pre-processing
 - [x] [Vue Router](https://router.vuejs.org/) for routing management
 - [x] [Pinia](https://pinia.esm.dev/) for global state management
-- [x] [Axios](https://axios- [x] http.com/) for request management
-- [x] [iconify/json] and [unplugin- [x] icons] for icon management, can use icones quickly
-- [x] [unplugin- [x] auto- [x] import] and [unplugin- [x] vue- [x] components] for automatic import, free your hands
+- [x] [Axios](https://axios-http.com/) for request management
+- [x] [iconify/json] and [unplugin-icons] for icon management, can use icones quickly
+- [x] [unplugin-auto-import] and [unplugin-vue-components] for automatic import, free your hands
 - [x] [ESLint](https://eslint.org/) for code checking
 - [x] [Prettier](https://prettier.io/) for code formatting
 - [x] [cspell] for code spell checking
-- [x] [Husky](https://typicode.github.io/husky/#/) and [lint- [x] staged] and [commitlint] for Git commit management
+- [x] [Husky](https://typicode.github.io/husky/#/) and [lint-staged] and [commitlint] for Git commit management
 - [ ] [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) for containerization
 - [x] Use `@/*` as absolute path
 - [x] Deploy on Vercel, zero config
@@ -31,6 +31,10 @@ VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tai
 - [Vite](https://vitejs.dev/)
 - [Naive UI](https://www.naiveui.com/)
 - [Sass](https://sass-lang.com/)
+
+## Code Style
+
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 ## Getting Started
 

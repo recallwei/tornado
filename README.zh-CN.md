@@ -32,6 +32,10 @@ VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailw
 - [Naive UI](https://www.naiveui.com/)
 - [Sass](https://sass-lang.com/)
 
+## 代码规范
+
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
 ## 开始使用
 
 ### GitHub 模板
