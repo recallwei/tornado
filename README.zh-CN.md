@@ -2,7 +2,7 @@
 
 [English](./README.md) / 简体中文
 
-VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` 的模板项目.
+VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` 的模板项目。
 
 ## 特性
 
