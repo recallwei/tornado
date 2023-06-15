@@ -18,7 +18,7 @@
   "repository": "github:recallwei/vst",
   "scripts": {
     "dev": "vite",
-    "build": "run-p check:type build-only",
+    "build": "run-p type:check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "prepare": "husky install",
