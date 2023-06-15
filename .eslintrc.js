@@ -1,4 +1,5 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
+
 const { defineConfig } = require('eslint-define-config')
 const path = require('path')
 
