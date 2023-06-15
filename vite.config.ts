@@ -28,11 +28,6 @@ export default defineConfig(({ mode }) => ({
         },
         {
           'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar', 'createDiscreteApi']
-        },
-        {
-          from: 'naive-ui',
-          imports: ['FormInst', 'FormRules', 'UploadFileInfo', 'UploadCustomRequestOptions', 'ConfigProviderProps'],
-          type: true
         }
       ]
     }),
