@@ -22,14 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "src/**/*.vue",
-    "env.d.ts",
-    "auto-imports.d.ts",
-    "components.d.ts",
-    "vite.config.*",
-    ".eslintrc.js"
-  ],
+  "include": ["src/**/*", "src/**/*.vue", "vite.config.*", ".eslintrc.js"],
   "exclude": ["dist", "node_modules"]
 }
