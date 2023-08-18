@@ -4,7 +4,7 @@ English / [简体中文](./README.zh-CN.md)
 
 VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` starter template.
 
-## Feature
+## Features
 
 - [x] Based on [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), [pnpm](https://pnpm.io/)
 - [x] [TypeScript](https://www.typescriptlang.org/), of course
