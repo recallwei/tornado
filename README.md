@@ -1,8 +1,8 @@
-# VST
+# Vue Starter Template
 
 English / [简体中文](./README.zh-CN.md)
 
-VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` starter template.
+Vue Starter Template is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` starter template.
 
 ## Features
 
@@ -40,17 +40,17 @@ VST (Vue Starter Template) is an opinionated `Vue 3/Vite/TypeScript/Naive UI/Tai
 
 ### GitHub Template
 
-> VST requires Node version >=14.16.0
+> Vue Starter Template requires Node version >=14.16.0
 
-[Create a repo using this template](https://github.com/recallwei/vst/generate).
+[Create a repo using this template](https://github.com/recallwei/vue-starter-template/generate).
 
 ### Clone to local
 
 If you prefer to do it manually with a cleaner Git history then follow these steps:
 
 ```bash
-npx degit recallwei/vst my-vst-app
-cd my-vst-app
+npx degit recallwei/vue-starter-template my-app
+cd my-app
 pnpm i
 ```
 

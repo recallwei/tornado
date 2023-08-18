@@ -1,8 +1,8 @@
-# VST
+# Vue Starter Template
 
 [English](./README.md) / 简体中文
 
-VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` 的模板项目。
+Vue Starter Template (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailwind CSS` 的模板项目。
 
 ## 特性
 
@@ -42,15 +42,15 @@ VST (Vue Starter Template) 是一个基于 `Vue 3/Vite/TypeScript/Naive UI/Tailw
 
 > EST 需要 Node 版本 >=14.16.0
 
-[使用这个模板创建仓库](https://github.com/recallwei/vst/generate)。
+[使用这个模板创建仓库](https://github.com/recallwei/vue-starter-template/generate)。
 
 ### 克隆到本地
 
 如果您更喜欢使用更干净的 Git 历史记录手动执行此操作：
 
 ```bash
-npx degit recallwei/vst my-vst-app
-cd my-vst-app
+npx degit recallwei/vue-starter-template my-app
+cd my-app
 pnpm i
 ```
 

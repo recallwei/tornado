@@ -1,7 +1,9 @@
 import NProgress from 'nprogress'
-import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
-
-import { siteMetaData } from '@/constants'
+import {
+  createRouter,
+  createWebHistory,
+  type RouteLocationNormalized
+} from 'vue-router'
 
 import { routes } from './routes'
 

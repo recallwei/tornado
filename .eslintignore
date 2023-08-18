@@ -2,7 +2,4 @@ node_modules
 /.vscode
 /build
 /dist
-/scripts
-/postcss.config.js
-/tailwind.config.js
 pnpm-lock.yaml

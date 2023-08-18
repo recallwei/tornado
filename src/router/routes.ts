@@ -1,5 +1,3 @@
-import { siteMetaData } from '@/constants'
-
 const { appName } = siteMetaData
 
 export const routes = [

@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { useCounterStore } from '@/store'
 import PlusIcon from '~icons/ic/baseline-plus'
 import RemoveIcon from '~icons/ic/baseline-remove'
+
 const counterStore = useCounterStore()
 </script>
 
 <template>
   <main class="absolute inset-0 m-auto">
-    <div class="absolute inset-0 m-auto flex h-fit w-1/3 flex-col items-center space-y-4 pb-20 text-center">
+    <div
+      class="absolute inset-0 m-auto flex h-fit w-1/3 flex-col items-center space-y-4 pb-20 text-center"
+    >
       <img
         class="animate-pulse cursor-pointer select-none"
         width="160"

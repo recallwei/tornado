@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import type { AxiosResponse } from 'axios'
 
-import type { User } from '@/api'
-import { UserApi } from '@/api'
-import { useLoading } from '@/hooks'
+import type { User } from '@/types'
 import LoadingIcon from '~icons/svg-spinners/blocks-wave'
 
 const [loading, loadingDispatcher] = useLoading(false)
@@ -12,21 +10,21 @@ const users = ref<User[]>([])
 
 onMounted(() => {
   loadingDispatcher.loading()
-  UserApi.getUsers()
+  UserAPI.getUsers(new BasePageModel())
     .then((res) => {
       const { data } = res || {}
       users.value = data
     })
-    .catch((err: AxiosResponse) => {
-      console.log(err)
-    })
+    .catch((err: AxiosResponse) => console.log(err))
     .finally(() => loadingDispatcher.loaded())
 })
 </script>
 
 <template>
   <main class="absolute inset-0 m-auto">
-    <div class="absolute inset-0 m-auto flex h-fit w-1/3 flex-col items-center space-y-4 pb-20 text-center">
+    <div
+      class="absolute inset-0 m-auto flex h-fit w-1/3 flex-col items-center space-y-4 pb-20 text-center"
+    >
       <img
         class="animate-pulse cursor-pointer select-none"
         width="160"

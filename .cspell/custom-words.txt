@@ -1,4 +1,5 @@
 axios
+brucesong
 commitlint
 degit
 esbuild
