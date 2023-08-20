@@ -11,7 +11,7 @@
     "cspell:check": "npx cspell \"**\"",
     "cspell:sort": "node ./scripts/cspell-sort.js",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,tsx,vue}\" --color",
-    "eslint:fix": "pnpm eslint:check -- --fix",
+    "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --check --write --ignore-unknown .",
     "type:check": "vue-tsc --noEmit -p tsconfig.json --composite false",
