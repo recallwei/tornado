@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 const ogDescription = 'An Opinionated front-end tooling'
-const ogImage = 'https://brucesong.xyz/og-image.png'
+const ogImage = 'https://tornado.brucesong.xyz/og-image.png'
 const ogTitle = 'Tornado'
-const ogUrl = 'https://brucesong.xyz'
+const ogUrl = 'https://tornado.brucesong.xyz'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
