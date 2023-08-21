@@ -1,5 +1,7 @@
 # Create Tornado
 
+A CLI tool for scaffolding a project from a opinionated template for popular frameworks.
+
 ## Usage
 
 With npm:
