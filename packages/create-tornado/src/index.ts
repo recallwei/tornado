@@ -2,6 +2,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { promisify } from 'node:util'
 
 import spawn from 'cross-spawn'
 import { red, reset } from 'kolorist'
@@ -115,10 +116,8 @@ async function init() {
         }
       }
     )
-  } catch (error) {
-    if (error instanceof Error) {
-      console.log(error.message)
-    }
+  } catch (error: any) {
+    console.log(error.message)
     return
   }
 
@@ -190,8 +189,16 @@ async function init() {
     }
   }
 
-  const files = fs.readdirSync(templateDir)
-  files.filter((f) => f !== 'package.json').forEach((f) => write(f))
+  try {
+    const files = await promisify(fs.readdir)(templateDir)
+    if (!files || files.length === 0) {
+      throw new Error()
+    }
+
+    files.filter((f) => f !== 'package.json').forEach((f) => write(f))
+  } catch {
+    throw new Error('This template is not supported yet!')
+  }
 
   const pkg = JSON.parse(
     fs.readFileSync(path.join(templateDir, 'package.json'), 'utf-8')
@@ -223,4 +230,4 @@ async function init() {
   console.log()
 }
 
-init().catch((e) => console.error(e))
+init().catch((e) => console.error(e.message))

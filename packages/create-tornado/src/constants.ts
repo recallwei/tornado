@@ -1,4 +1,4 @@
-import { blue, cyan, green, yellow } from 'kolorist'
+import { blue, cyan, green, lightBlue, yellow } from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -11,12 +11,12 @@ export const FRAMEWORKS: Framework[] = [
       {
         name: 'vue-ts-element-unocss',
         display: 'Vue + TypeScript + Element Plus + UnoCss',
-        color: blue
+        color: lightBlue
       },
       {
         name: 'vue-ts-naive-tailwindcss',
         display: 'Vue + TypeScript + Naive UI + TailwindCSS',
-        color: yellow
+        color: green
       }
     ]
   },
@@ -27,8 +27,19 @@ export const FRAMEWORKS: Framework[] = [
     templates: [
       {
         name: 'react-ts-antd-unocss',
-        display: 'React + TypeScript + Ant Design UnoCSS',
+        display: 'React + TypeScript + Ant Design + UnoCSS (In progress...)',
         color: blue
+      },
+      {
+        name: 'react-ts-antd-unocss',
+        display:
+          'React + TypeScript + Ant Design + TailwindCSS (In progress...)',
+        color: lightBlue
+      },
+      {
+        name: 'react-ts-chakra-panda',
+        display: 'React + TypeScript + Chakra UI + PandaCSS (In progress...)',
+        color: yellow
       }
     ]
   }
