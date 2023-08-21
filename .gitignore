@@ -23,3 +23,5 @@ coverage
 *.sln
 *.sw?
 *.zip
+
+.turbo

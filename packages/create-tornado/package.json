@@ -1,0 +1,47 @@
+{
+  "name": "create-tornado",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "",
+  "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/recallwei/tornado.git",
+    "directory": "packages/create-tornado"
+  },
+  "bugs": {
+    "url": "https://github.com/recallwei/vite/issues"
+  },
+  "homepage": "https://github.com/recallwei/tornado",
+  "keywords": [
+    "tornado"
+  ],
+  "bin": {
+    "create-tornado": "index.js",
+    "cta": "index.js"
+  },
+  "files": [
+    "index.js",
+    "templates",
+    "dist"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/prompts": "^2.4.4",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "tsx": "^3.12.7"
+  },
+  "engines": {
+    "node": "^18.0.0 || >=20.0.0"
+  },
+  "license": "MIT"
+}
