@@ -9,6 +9,8 @@
   "MD014": false,
   // 不限制标题重复
   "MD024": false,
+  // 不限制标题重复
+  "MD025": false,
   // 允许标题尾随标点符号
   "MD026": false,
   // 允许的 HTML 标签
@@ -23,7 +25,9 @@
       "h1",
       "img",
       "p",
+      "pre",
       "RulesTable",
+      "script",
       "summary",
       "sup",
       "TabItem",

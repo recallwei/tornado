@@ -5,6 +5,11 @@
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": "github:recallwei/tornado",
   "scripts": {
+    "dev": "pnpm -r --parallel --filter=\"./packages/*\" run dev",
+    "build": "pnpm -r --filter=\"./packages/*\" run build",
+    "docs:dev": "pnpm --filter=docs dev",
+    "docs:build": "pnpm --filter=docs build",
+    "docs:preview": "pnpm --filter=docs preview",
     "cspell:check": "cspell \"**\"",
     "cspell:sort": "node ./scripts/cspell-sort.js",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,tsx,vue}\" --color",
@@ -23,7 +28,9 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",
     "prettier": "^3.0.2",
-    "turbo": "^1.10.12"
+    "tsx": "^3.12.7",
+    "turbo": "^1.10.12",
+    "unbuild": "^1.2.1"
   },
   "license": "MIT"
 }

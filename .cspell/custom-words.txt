@@ -1,5 +1,10 @@
+antd
 brucesong
 commitlint
 kolorist
+lintstaged
 recallwei
+tailwindcss
 typecheck
+unocss
+vitepress

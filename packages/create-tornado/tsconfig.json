@@ -1,8 +1,7 @@
 {
   "include": [
     "build.config.ts",
-    "src",
-    "__tests__"
+    "src"
   ],
   "compilerOptions": {
     "outDir": "dist",

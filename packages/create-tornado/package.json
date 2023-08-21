@@ -1,7 +1,7 @@
 {
+  "type": "module",
   "name": "create-tornado",
   "version": "0.0.0",
-  "type": "module",
   "description": "",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
@@ -37,11 +37,13 @@
     "cross-spawn": "^7.0.3",
     "kolorist": "^1.8.0",
     "minimist": "^1.2.8",
-    "prompts": "^2.4.2",
-    "tsx": "^3.12.7"
+    "prompts": "^2.4.2"
   },
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/cross-spawn": "^6.0.2"
+  }
 }
