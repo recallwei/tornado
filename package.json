@@ -27,6 +27,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
+    "tornado-tools": "workspace:^",
     "unbuild": "^2.0.0"
   },
   "license": "MIT"

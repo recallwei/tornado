@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "tornado-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add front-end engineering suites for your projects.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
@@ -18,8 +18,8 @@
     "tornado-tools"
   ],
   "bin": {
-    "cspell:sort": "scripts/cspell-sort.js",
-    "generate:contributors": "scripts/generate-contributors.js"
+    "cspell-sort": "scripts/cspell-sort.js",
+    "generate-contributors": "scripts/generate-contributors.js"
   },
   "files": [
     "scripts",

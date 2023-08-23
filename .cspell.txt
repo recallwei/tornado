@@ -2,12 +2,12 @@ antd
 brucesong
 chakra
 commitlint
+greenkeeper
 kolorist
 lintstaged
+plusplus
 recallwei
 tailwindcss
 typecheck
 unocss
 vitepress
-greenkeeper
-plusplus
