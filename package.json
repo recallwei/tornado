@@ -11,19 +11,22 @@
     "docs:build": "pnpm --filter=docs build",
     "docs:preview": "pnpm --filter=docs preview",
     "cspell:check": "cspell \"**\"",
-    "cspell:sort": "node ./scripts/cspell-sort.js",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,tsx,vue}\" --color",
     "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --check --write --ignore-unknown ."
+    "prettier:fix": "prettier --check --write --ignore-unknown .",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.5",
+    "@brucesong/eslint-config-ts": "^1.0.6",
     "@changesets/cli": "^2.26.2",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "cspell": "^7.0.1",
     "eslint": "^8.47.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
-    "turbo": "^1.10.12",
     "unbuild": "^2.0.0"
   },
   "license": "MIT"

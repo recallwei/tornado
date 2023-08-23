@@ -3,4 +3,4 @@
 ## Introduction
 
 - **Create Tornado**: A CLI tool for scaffolding a project from an opinionated template for popular frameworks.
-- **Tornado X**: Add front-end engineering suites for your projects.
+- **Tornado Tools**: Add front-end engineering suites for your projects.

@@ -31,7 +31,7 @@ export default defineConfig({
         items: [
           { text: 'Get Started', link: '/guide/' },
           { text: 'Create Tornado', link: '/guide/create-tornado' },
-          { text: 'Tornado X', link: '/guide/tornado-x' }
+          { text: 'Tornado Tools', link: '/guide/tornado-tools' }
         ]
       }
     ],
