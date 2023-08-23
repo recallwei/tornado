@@ -3,7 +3,9 @@ type LoadingDispatcher = {
   loaded: () => void
 }
 
-export const useLoading = (defaultStatus: boolean = false): [Ref<boolean>, LoadingDispatcher] => {
+export const useLoading = (
+  defaultStatus: boolean = false
+): [Ref<boolean>, LoadingDispatcher] => {
   const loading = ref(defaultStatus)
 
   const dispatcher: LoadingDispatcher = {

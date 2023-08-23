@@ -1,4 +1,4 @@
-import { blue, cyan, green, lightBlue, yellow } from 'kolorist'
+import { blue, cyan, green, lightBlue, lightMagenta, yellow } from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -17,6 +17,11 @@ export const FRAMEWORKS: Framework[] = [
         name: 'vue-ts-naive-tailwindcss',
         display: 'Vue + TypeScript + Naive UI + TailwindCSS',
         color: green
+      },
+      {
+        name: 'vitepress-ts-unocss',
+        display: 'VitePress + TypeScript + UnoCSS',
+        color: lightMagenta
       }
     ]
   },

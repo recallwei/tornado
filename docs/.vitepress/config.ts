@@ -1,11 +1,9 @@
 import { defineConfig } from 'vitepress'
-
 const ogDescription = 'An Opinionated front-end tooling'
 const ogImage = 'https://tornado.brucesong.xyz/og-image.png'
 const ogTitle = 'Tornado'
 const ogUrl = 'https://tornado.brucesong.xyz'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Tornado',
   description: 'An Opinionated front-end tooling',
@@ -22,7 +20,6 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
 
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/' }

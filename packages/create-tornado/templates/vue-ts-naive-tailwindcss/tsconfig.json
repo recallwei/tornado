@@ -2,17 +2,8 @@
   "compilerOptions": {
     "module": "ESNext",
     "moduleResolution": "node",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "types": [
-      "node",
-      "jsdom",
-      "unplugin-icons/types/vue",
-      "naive-ui/volar"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["node", "jsdom", "unplugin-icons/types/vue", "naive-ui/volar"],
     "target": "ESNext",
     "strict": true,
     "esModuleInterop": true,
@@ -28,19 +19,9 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "vite.config.ts"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vite.config.ts"],
+  "exclude": ["dist", "node_modules"]
 }

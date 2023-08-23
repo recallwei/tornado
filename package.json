@@ -18,13 +18,13 @@
     "prettier:fix": "prettier --check --write --ignore-unknown ."
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.4",
+    "@brucesong/eslint-config-ts": "^1.0.5",
     "@changesets/cli": "^2.26.2",
-    "cspell": "^7.0.0",
+    "cspell": "^7.0.1",
     "eslint": "^8.47.0",
     "prettier": "^3.0.2",
     "turbo": "^1.10.12",
-    "unbuild": "^1.2.1"
+    "unbuild": "^2.0.0"
   },
   "license": "MIT"
 }
