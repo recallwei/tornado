@@ -1,4 +1,12 @@
-import { blue, cyan, green, lightBlue, lightMagenta, yellow } from 'kolorist'
+import {
+  blue,
+  cyan,
+  green,
+  lightBlue,
+  lightGreen,
+  lightMagenta,
+  yellow
+} from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -45,6 +53,18 @@ export const FRAMEWORKS: Framework[] = [
         name: 'react-ts-chakra-panda',
         display: 'React + TypeScript + Chakra UI + PandaCSS (In progress...)',
         color: yellow
+      }
+    ]
+  },
+  {
+    name: 'nuxt',
+    display: 'Nuxt',
+    color: lightGreen,
+    templates: [
+      {
+        name: 'nuxt-ts-tailwindcss',
+        display: 'Nuxt.js + TypeScript + TailwindCSS',
+        color: lightGreen
       }
     ]
   }

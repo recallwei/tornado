@@ -1,0 +1,14 @@
+brucesong
+commitlint
+iconify
+Neue
+Noto
+nuxi
+nuxt
+nuxtjs
+pinia
+Roboto
+tailwindcss
+typecheck
+unplugin
+vueuse

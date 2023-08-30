@@ -1,1 +1,3 @@
-packages/create-tornado/templates
+.husky
+pnpm-lock.yaml
+packages/create-tornado/templates/*
