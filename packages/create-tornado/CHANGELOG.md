@@ -1,5 +1,11 @@
 # create-tornado
 
+## 0.0.5
+
+### Patch Changes
+
+- update dep version to rc
+
 ## 0.0.4
 
 ### Patch Changes

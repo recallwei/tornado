@@ -17,7 +17,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@nuxt/image": "0.7.1",
     "@vueuse/motion": "^2.0.0",
     "pinia": "^2.1.6"
   },
@@ -28,6 +27,7 @@
     "@egoist/tailwindcss-icons": "^1.1.0",
     "@iconify/json": "^2.2.108",
     "@nuxt/devtools": "^0.8.2",
+    "@nuxt/image": "1.0.0-rc.1",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
