@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "tornado",
   "description": "🌪 Tornado is a tool that makes building web apps faster!",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
@@ -22,7 +21,7 @@
     "@changesets/cli": "^2.26.2",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "cspell": "^7.2.0",
+    "cspell": "^7.3.2",
     "eslint": "^8.48.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
@@ -30,5 +29,6 @@
     "tornado-tools": "workspace:^",
     "unbuild": "^2.0.0"
   },
+  "private": true,
   "license": "MIT"
 }
