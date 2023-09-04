@@ -29,6 +29,11 @@
     "tornado-tools": "workspace:^",
     "unbuild": "^2.0.0"
   },
+  "packageManager": "pnpm@8.5.0",
+  "engines": {
+    "node": ">=18.16.1",
+    "pnpm": ">=8.0.0"
+  },
   "private": true,
   "license": "MIT"
 }
