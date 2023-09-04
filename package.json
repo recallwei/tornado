@@ -28,7 +28,13 @@
     "prettier": "^3.0.3",
     "tornado-tools": "workspace:^",
     "unbuild": "^2.0.0",
-    "vitepress": "1.0.0-rc.10"
+    "vitepress": "1.0.0-rc.10",
+    "vue": "^3.3.4"
+  },
+  "packageManager": "pnpm@8.5.0",
+  "engines": {
+    "node": ">=18.17.1",
+    "pnpm": ">=8.0.0"
   },
   "private": true,
   "license": "MIT"
