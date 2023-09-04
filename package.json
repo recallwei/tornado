@@ -6,15 +6,18 @@
   "scripts": {
     "dev": "pnpm -r --parallel --filter=\"./packages/*\" run dev",
     "build": "pnpm -r --filter=\"./packages/*\" run build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "docs:dev": "pnpm --filter=docs dev",
+    "docs:build": "pnpm --filter=docs build",
+    "docs:preview": "pnpm --filter=docs preview",
     "cspell:check": "cspell \"**\"",
     "eslint:check": "eslint \"**/*.{ts,tsx,js,tsx,vue}\" --color",
     "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@brucesong/eslint-config-ts": "^1.0.7",
@@ -27,9 +30,7 @@
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "tornado-tools": "workspace:^",
-    "unbuild": "^2.0.0",
-    "vitepress": "1.0.0-rc.10",
-    "vue": "^3.3.4"
+    "unbuild": "^2.0.0"
   },
   "packageManager": "pnpm@8.5.0",
   "engines": {

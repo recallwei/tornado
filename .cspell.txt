@@ -2,6 +2,7 @@ antd
 brucesong
 chakra
 commitlint
+esbuild
 greenkeeper
 kolorist
 lintstaged
