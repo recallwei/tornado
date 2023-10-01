@@ -8,6 +8,7 @@ kolorist
 lintstaged
 nuxt
 plusplus
+preinstall
 recallwei
 tailwindcss
 typecheck
