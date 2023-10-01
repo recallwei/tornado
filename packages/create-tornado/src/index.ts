@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 import fs from 'node:fs'
 import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { promisify } from 'node:util'
 
 import spawn from 'cross-spawn'
 import degit from 'degit'
@@ -13,7 +11,7 @@ import prompts from 'prompts'
 import { DEFAULT_TARGET_DIR, FRAMEWORKS, TEMPLATES } from './constants'
 import type { Framework } from './types'
 import {
-  copy,
+  capitalizeFirstLetter,
   emptyDir,
   formatTargetDir,
   isEmptyDir,
@@ -28,20 +26,6 @@ const argv = minimist<{
 }>(process.argv.slice(2), { string: ['_'] })
 
 const cwd = process.cwd()
-
-const emitter = degit('github:recallwei/react-ts-starter-template', {
-  cache: true,
-  force: true,
-  verbose: true
-})
-
-emitter.on('info', (info) => {
-  console.log(info.message)
-})
-
-emitter.clone('app').then(() => {
-  console.log('done')
-})
 
 async function init() {
   const argTargetDir = formatTargetDir(argv._[0])
@@ -189,39 +173,36 @@ async function init() {
 
   console.log(`\nScaffolding project in ${root}...`)
 
-  const templateDir = path.resolve(
-    fileURLToPath(import.meta.url),
-    '../../templates',
-    selectedTemplate
-  )
-
-  const write = (file: string, content?: string) => {
-    const targetPath = path.join(root, file)
-    if (content) {
-      fs.writeFileSync(targetPath, content)
-    } else {
-      copy(path.join(templateDir, file), targetPath)
-    }
-  }
+  const emitter = degit(`github:recallwei/${selectedTemplate}`, {
+    cache: true,
+    force: true,
+    verbose: true
+  })
 
   try {
-    const files = await promisify(fs.readdir)(templateDir)
-    if (!files || files.length === 0) {
-      throw new Error()
+    await emitter.clone(root)
+  } catch (err) {
+    if (err instanceof Error) {
+      console.log(`\n${red('✖')} ${capitalizeFirstLetter(err.message)}`)
     }
-
-    files.filter((f) => f !== 'package.json').forEach((f) => write(f))
-  } catch {
-    throw new Error('This template is not supported yet!')
+    console.log(
+      `\n${red(
+        '✖'
+      )} Could not fetch remote https://github.com/recallwei/${selectedTemplate}`
+    )
+    process.exit(1)
   }
 
   const pkg = JSON.parse(
-    fs.readFileSync(path.join(templateDir, 'package.json'), 'utf-8')
+    fs.readFileSync(path.join(root, 'package.json'), 'utf-8')
   )
 
   pkg.name = packageName || getProjectName()
 
-  write('package.json', `${JSON.stringify(pkg, null, 2)}\n`)
+  fs.writeFileSync(
+    path.join(root, 'package.json'),
+    `${JSON.stringify(pkg, null, 2)}\n`
+  )
 
   const cdProjectName = path.relative(cwd, root)
   console.log('\nDone. Now run:\n')

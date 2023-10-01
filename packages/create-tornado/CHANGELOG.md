@@ -1,5 +1,11 @@
 # create-tornado
 
+## 0.0.6
+
+### Patch Changes
+
+- use degit instead of using templates
+
 ## 0.0.5
 
 ### Patch Changes
