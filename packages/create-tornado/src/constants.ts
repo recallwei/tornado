@@ -1,12 +1,4 @@
-import {
-  blue,
-  cyan,
-  green,
-  lightBlue,
-  lightGreen,
-  lightMagenta,
-  yellow
-} from 'kolorist'
+import { blue, cyan, green, lightGreen } from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -17,19 +9,9 @@ export const FRAMEWORKS: Framework[] = [
     color: green,
     templates: [
       {
-        name: 'vue-ts-element-unocss',
-        display: 'Vue + TypeScript + Element Plus + UnoCss',
-        color: lightBlue
-      },
-      {
-        name: 'vue-ts-naive-tailwindcss',
+        name: 'vue-ts-starter-template',
         display: 'Vue + TypeScript + Naive UI + TailwindCSS',
         color: green
-      },
-      {
-        name: 'vitepress-ts-unocss',
-        display: 'VitePress + TypeScript + UnoCSS',
-        color: lightMagenta
       }
     ]
   },
@@ -39,20 +21,9 @@ export const FRAMEWORKS: Framework[] = [
     color: cyan,
     templates: [
       {
-        name: 'react-ts-antd-unocss',
-        display: 'React + TypeScript + Ant Design + UnoCSS (In progress...)',
+        name: 'react-ts-starter-template',
+        display: 'React + TypeScript + antd + TailwindCSS',
         color: blue
-      },
-      {
-        name: 'react-ts-antd-unocss',
-        display:
-          'React + TypeScript + Ant Design + TailwindCSS (In progress...)',
-        color: lightBlue
-      },
-      {
-        name: 'react-ts-chakra-panda',
-        display: 'React + TypeScript + Chakra UI + PandaCSS (In progress...)',
-        color: yellow
       }
     ]
   },
@@ -62,8 +33,8 @@ export const FRAMEWORKS: Framework[] = [
     color: lightGreen,
     templates: [
       {
-        name: 'nuxt-ts-tailwindcss',
-        display: 'Nuxt.js + TypeScript + TailwindCSS',
+        name: 'nuxt-ts-starter-template',
+        display: 'Nuxt + TypeScript + TailwindCSS',
         color: lightGreen
       }
     ]

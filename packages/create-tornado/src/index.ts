@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { promisify } from 'node:util'
 
 import spawn from 'cross-spawn'
+import degit from 'degit'
 import { red, reset } from 'kolorist'
 import minimist from 'minimist'
 import prompts from 'prompts'
@@ -27,6 +28,20 @@ const argv = minimist<{
 }>(process.argv.slice(2), { string: ['_'] })
 
 const cwd = process.cwd()
+
+const emitter = degit('github:recallwei/react-ts-starter-template', {
+  cache: true,
+  force: true,
+  verbose: true
+})
+
+emitter.on('info', (info) => {
+  console.log(info.message)
+})
+
+emitter.clone('app').then(() => {
+  console.log('done')
+})
 
 async function init() {
   const argTargetDir = formatTargetDir(argv._[0])

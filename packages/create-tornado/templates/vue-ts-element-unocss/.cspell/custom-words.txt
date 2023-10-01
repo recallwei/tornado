@@ -1,4 +1,0 @@
-pinia
-unocss
-unplugin
-vueuse
