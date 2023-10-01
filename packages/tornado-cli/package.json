@@ -1,13 +1,13 @@
 {
   "type": "module",
-  "name": "tornado-tools",
-  "version": "0.0.2",
-  "description": "Add front-end engineering suites for your projects.",
+  "name": "tornado-cli",
+  "version": "0.0.0",
+  "description": "Add engineering suites for your projects.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/recallwei/tornado.git",
-    "directory": "packages/tornado-tools"
+    "directory": "packages/tornado-cli"
   },
   "bugs": {
     "url": "https://github.com/recallwei/tornado/issues"
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/recallwei/tornado",
   "keywords": [
     "tornado",
-    "tornado-tools"
+    "tornado-cli"
   ],
   "bin": {
     "cspell-sort": "scripts/cspell-sort.js",

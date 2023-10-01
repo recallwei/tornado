@@ -14,18 +14,19 @@
     "eslint:fix": "pnpm eslint:check --fix",
     "prettier:check": "prettier --check --ignore-unknown .",
     "prettier:fix": "prettier --write --ignore-unknown .",
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install"
   },
   "dependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.7",
+    "@brucesong/eslint-config-ts": "^1.0.8",
     "@changesets/cli": "^2.26.2",
-    "@commitlint/cli": "^17.7.1",
+    "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
-    "cspell": "^7.3.2",
-    "eslint": "^8.48.0",
+    "cspell": "^7.3.7",
+    "eslint": "^8.50.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
