@@ -2,6 +2,7 @@ antd
 brucesong
 chakra
 commitlint
+degit
 esbuild
 greenkeeper
 kolorist
