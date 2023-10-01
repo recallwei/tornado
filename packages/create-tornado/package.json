@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "create-tornado",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A CLI tool for scaffolding a project from an opinionated template for popular frameworks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {

@@ -1,5 +1,11 @@
 # create-tornado
 
+## 0.0.7
+
+### Patch Changes
+
+- update degit url
+
 ## 0.0.6
 
 ### Patch Changes

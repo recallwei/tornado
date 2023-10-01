@@ -173,8 +173,8 @@ async function init() {
 
   console.log(`\nScaffolding project in ${root}...`)
 
-  const emitter = degit(`github:recallwei/${selectedTemplate}`, {
-    cache: true,
+  const emitter = degit(`https://github.com/recallwei/${selectedTemplate}`, {
+    cache: false,
     force: true,
     verbose: true
   })
