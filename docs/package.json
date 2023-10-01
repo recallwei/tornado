@@ -14,7 +14,7 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.10"
+    "vitepress": "1.0.0-rc.20"
   },
   "private": true,
   "license": "MIT"

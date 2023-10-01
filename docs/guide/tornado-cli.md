@@ -1,3 +1,3 @@
-# Tornado X
+# Tornado CLI
 
 🚀 In development...
