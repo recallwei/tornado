@@ -4,7 +4,7 @@ import fs from 'fs'
 import { bgBlue, lightGreen } from 'kolorist'
 import path from 'path'
 
-import { TORNADO_TOOLS } from '../constants'
+import { TORNADO_X_NAME } from '../constants'
 
 // 忽略的用户，机器人
 const IGNORED_USERS = new Set([
@@ -180,7 +180,7 @@ async function main(): Promise<void> {
 main()
   .then(() =>
     process.stdout.write(
-      `${bgBlue(TORNADO_TOOLS)} ${lightGreen(
+      `${bgBlue(TORNADO_X_NAME)} ${lightGreen(
         'Generate contributors successfully!'
       )}\n`
     )

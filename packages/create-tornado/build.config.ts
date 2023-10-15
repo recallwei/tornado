@@ -9,7 +9,9 @@ export default defineBuildConfig({
     esbuild: {
       target: 'node18',
       minify: true
-    }
+    },
+    emitCJS: true,
+    cjsBridge: true
   },
   alias: {
     prompts: 'prompts/lib/index.js'

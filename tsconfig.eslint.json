@@ -5,5 +5,5 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": [".eslintrc.js", "scripts/*.ts", "packages/**/*.ts"]
+  "include": [".eslintrc.js", "packages/**/*.ts"]
 }

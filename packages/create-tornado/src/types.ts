@@ -1,13 +1,13 @@
 type ColorFunc = (str: string | number) => string
 
-export type Framework = {
+export interface Framework {
   name: string
   display: string
   color: ColorFunc
   templates: FrameworkTemplate[]
 }
 
-type FrameworkTemplate = {
+interface FrameworkTemplate {
   name: string
   display: string
   color: ColorFunc

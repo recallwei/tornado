@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "include": ["build.config.ts", "src"],
   "compilerOptions": {
     "outDir": "dist",

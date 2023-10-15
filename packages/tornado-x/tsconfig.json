@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "include": ["build.config.ts", "src"],
   "compilerOptions": {
     "outDir": "dist",
@@ -7,7 +8,7 @@
     "moduleResolution": "bundler",
     "strict": true,
     "skipLibCheck": true,
-    "declaration": false,
+    "declaration": true,
     "sourceMap": false,
     "noUnusedLocals": true,
     "esModuleInterop": true

@@ -1,5 +1,41 @@
 # create-tornado
 
+## 0.0.13
+
+### Patch Changes
+
+- update tornado-x
+
+## 0.0.12
+
+### Patch Changes
+
+- update tornado-x
+
+## 0.0.11
+
+### Patch Changes
+
+- update tornado-x
+
+## 0.0.10
+
+### Patch Changes
+
+- update tornado-x
+
+## 0.0.9
+
+### Patch Changes
+
+- update tornado-x
+
+## 0.0.8
+
+### Patch Changes
+
+- update tornado-x
+
 ## 0.0.7
 
 ### Patch Changes

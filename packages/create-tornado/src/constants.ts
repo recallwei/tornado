@@ -42,7 +42,7 @@ export const FRAMEWORKS: Framework[] = [
 ]
 
 export const TEMPLATES = FRAMEWORKS.map(
-  (f) => (f.templates && f.templates.map((t) => t.name)) || [f.name]
+  (f) => f.templates?.map((t) => t.name) || [f.name]
 ).reduce((a, b) => a.concat(b), [])
 
 export const DEFAULT_TARGET_DIR = 'tornado-app'

@@ -1,13 +1,13 @@
 {
   "type": "module",
-  "name": "tornado-cli",
-  "version": "0.0.0",
+  "name": "tornado-x",
+  "version": "0.0.5",
   "description": "Add engineering suites for your projects.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/recallwei/tornado.git",
-    "directory": "packages/tornado-cli"
+    "directory": "packages/tornado-x"
   },
   "bugs": {
     "url": "https://github.com/recallwei/tornado/issues"
@@ -15,14 +15,13 @@
   "homepage": "https://github.com/recallwei/tornado",
   "keywords": [
     "tornado",
-    "tornado-cli"
+    "tornado-x"
   ],
   "bin": {
-    "cspell-sort": "scripts/cspell-sort.js",
-    "generate-contributors": "scripts/generate-contributors.js"
+    "tornado-x": "bin/index.js"
   },
   "files": [
-    "scripts",
+    "bin",
     "dist"
   ],
   "scripts": {
@@ -32,8 +31,14 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
+    "@types/cross-spawn": "^6.0.3",
+    "@types/degit": "^2.8.4",
+    "@types/prompts": "^2.4.6",
+    "commander": "^11.1.0",
     "cross-fetch": "^4.0.0",
-    "kolorist": "^1.8.0"
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "prompts": "^2.4.2"
   },
   "license": "MIT"
 }

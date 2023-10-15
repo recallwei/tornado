@@ -29,9 +29,9 @@ const cwd = process.cwd()
 
 async function init() {
   const argTargetDir = formatTargetDir(argv._[0])
-  const argTemplate = argv.template || argv.t
+  const argTemplate = argv.template ?? argv.t
 
-  let targetDir = argTargetDir || DEFAULT_TARGET_DIR
+  let targetDir = argTargetDir ?? DEFAULT_TARGET_DIR
   const getProjectName = () =>
     targetDir === '.' ? path.basename(path.resolve()) : targetDir
 
@@ -47,8 +47,8 @@ async function init() {
           name: 'projectName',
           message: reset('Project name:'),
           initial: DEFAULT_TARGET_DIR,
-          onState: (state) => {
-            targetDir = formatTargetDir(state.value) || DEFAULT_TARGET_DIR
+          onState: (state: string) => {
+            targetDir = formatTargetDir(state) ?? DEFAULT_TARGET_DIR
           }
         },
         {
@@ -78,7 +78,7 @@ async function init() {
           name: 'packageName',
           message: reset('Package name:'),
           initial: () => toValidPackageName(getProjectName()),
-          validate: (dir) =>
+          validate: (dir: string) =>
             isValidPackageName(dir) || 'Invalid package.json name'
         },
         {
@@ -99,7 +99,7 @@ async function init() {
         },
         {
           type: (framework: Framework) =>
-            framework && framework.templates ? 'select' : null,
+            framework?.templates ? 'select' : null,
           name: 'template',
           message: reset('Select a template:'),
           choices: (framework: Framework) =>
@@ -115,11 +115,12 @@ async function init() {
         }
       }
     )
-  } catch (error: any) {
-    console.log(error.message)
+  } catch (error) {
+    console.log((error as Error).message)
     return
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const { framework, overwrite, packageName, template } = result
 
   const root = path.join(cwd, targetDir)
@@ -130,6 +131,7 @@ async function init() {
     fs.mkdirSync(root, { recursive: true })
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const selectedTemplate: string = template || framework?.name || argTemplate
 
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent)
@@ -195,7 +197,7 @@ async function init() {
 
   const pkg = JSON.parse(
     fs.readFileSync(path.join(root, 'package.json'), 'utf-8')
-  )
+  ) as Record<string, unknown>
 
   pkg.name = packageName || getProjectName()
 
@@ -226,4 +228,4 @@ async function init() {
   console.log()
 }
 
-init().catch((e) => console.error(e.message))
+init().catch((e) => console.error((e as Error).message))

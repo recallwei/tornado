@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "name": "docs",
   "description": "Tornado docs website.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
@@ -8,13 +7,14 @@
     "url": "https://github.com/recallwei/tornado.git",
     "directory": "packages/docs"
   },
+  "type": "module",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.20"
+    "vitepress": "1.0.0-rc.22"
   },
   "private": true,
   "license": "MIT"
