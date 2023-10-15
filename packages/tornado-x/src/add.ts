@@ -74,12 +74,12 @@ export async function add() {
             {
               title: 'Basic',
               value: 'basic',
-              description: 'commitlint + husky + commitizen'
+              description: '@commitlint/config-conventional'
             },
             {
               title: 'With cz-git',
               value: 'cz-git',
-              description: 'commitlint + husky + commitizen + cz-git'
+              description: '@commitlint/config-conventional with cz-git'
             }
           ]
         }
