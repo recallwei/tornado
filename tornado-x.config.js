@@ -1,2 +1,4 @@
 /** @type {import("tornado-x").Config} */
-module.exports = {}
+module.exports = {
+  lang: 'zh-CN'
+}

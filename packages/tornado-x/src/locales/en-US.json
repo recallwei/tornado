@@ -1,3 +1,20 @@
 {
+  "App": {
+    "Description": "Add engineering suites for your projects"
+  },
+  "Check": {
+    "Description": "Check the project engineering suite"
+  },
+  "Add": {
+    "Description": "Select engineering suites to install"
+  },
+  "CSpell": {
+    "Description": "CSpell related commands"
+  },
+  "Argument": {
+    "Action": "Specify the action you want to take"
+  },
+  "DisplayCurrentVersion": "Display the current version",
+  "DisplayHelpCommand": "Display help for command",
   "ActionNotMatch": "Action not match! Please check the command by 'tornado-x -h'"
 }

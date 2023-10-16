@@ -10,28 +10,29 @@ import { CSpellUtils } from './utils'
 
 program
   .name(TORNADO_X_NAME)
-  .description('Add engineering suites for your projects.')
-  .version(TORNADO_X_VERSION, '-v, --version', 'Display the current version')
-  .helpOption('-h, --help', 'Display help for command')
+  .description(t('App.Description'))
+  .version(TORNADO_X_VERSION, '-v, --version', t('DisplayCurrentVersion'))
+  .helpOption('-h, --help', t('DisplayHelpCommand'))
+  .addHelpCommand(false)
 
 program
   .command('check')
-  .description('Check the project engineering suite.')
+  .description(t('Check.Description'))
   .action(() => {
     check()
   })
 
 program
   .command('add')
-  .description('Select engineering suites to install.')
+  .description(t('Add.Description'))
   .action(() => {
     add().catch(() => {})
   })
 
 program
   .command('cspell')
-  .argument('<action>', 'specify the action you want to take')
-  .description('Sort your cspell custom dictionary.')
+  .description(t('CSpell.Description'))
+  .argument('<action>', t('Argument.Action'))
   .action((action) => {
     if (action === 'sort') {
       CSpellUtils.sort().catch(() => {})

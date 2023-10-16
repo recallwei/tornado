@@ -1,3 +1,20 @@
 {
+  "App": {
+    "Description": "为你的项目添加工程化套件"
+  },
+  "Check": {
+    "Description": "检查当前项目的工程化套件"
+  },
+  "Add": {
+    "Description": "选择工程化套件安装至项目"
+  },
+  "CSpell": {
+    "Description": "CSpell 相关命令"
+  },
+  "Argument": {
+    "Action": "指定你想要操作"
+  },
+  "DisplayCurrentVersion": "显示当前版本",
+  "DisplayHelpCommand": "显示帮助命令",
   "ActionNotMatch": "该命令不存在，请通过调用 -h 检查"
 }
