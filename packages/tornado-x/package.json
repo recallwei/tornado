@@ -1,6 +1,6 @@
 {
   "name": "tornado-x",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "Add engineering suites for your projects.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {

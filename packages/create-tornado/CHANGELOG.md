@@ -1,5 +1,17 @@
 # create-tornado
 
+## 0.0.17
+
+### Patch Changes
+
+- fix path bug
+
+## 0.0.16
+
+### Patch Changes
+
+- update import script
+
 ## 0.0.15
 
 ### Patch Changes

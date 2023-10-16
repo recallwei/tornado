@@ -1,5 +1,17 @@
 # tornado-x
 
+## 0.0.10
+
+### Patch Changes
+
+- fix path bug
+
+## 0.0.9
+
+### Patch Changes
+
+- update import script
+
 ## 0.0.8
 
 ### Patch Changes
