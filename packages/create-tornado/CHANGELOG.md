@@ -1,5 +1,11 @@
 # create-tornado
 
+## 0.0.14
+
+### Patch Changes
+
+- tornado-x support i18n
+
 ## 0.0.13
 
 ### Patch Changes

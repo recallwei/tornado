@@ -1,7 +1,6 @@
 {
-  "type": "module",
   "name": "create-tornado",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "A CLI tool for scaffolding a project from an opinionated template for popular frameworks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
@@ -18,14 +17,14 @@
     "create-tornado"
   ],
   "bin": {
-    "create-tornado": "index.js",
-    "cta": "index.js"
+    "create-tornado": "bin/index.js",
+    "cta": "bin/index.js"
   },
   "files": [
-    "index.js",
-    "templates",
+    "bin",
     "dist"
   ],
+  "type": "module",
   "scripts": {
     "dev": "unbuild --stub",
     "build": "unbuild",

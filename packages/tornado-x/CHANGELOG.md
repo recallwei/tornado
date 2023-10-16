@@ -1,5 +1,11 @@
 # tornado-x
 
+## 0.0.6
+
+### Patch Changes
+
+- tornado-x support i18n
+
 ## 0.0.5
 
 ### Patch Changes
