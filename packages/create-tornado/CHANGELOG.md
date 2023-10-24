@@ -1,5 +1,17 @@
 # create-tornado
 
+## 0.0.19
+
+### Patch Changes
+
+- fix bug
+
+## 0.0.18
+
+### Patch Changes
+
+- add rspress template
+
 ## 0.0.17
 
 ### Patch Changes

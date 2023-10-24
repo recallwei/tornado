@@ -1,4 +1,4 @@
-import { blue, cyan, green, lightGreen } from 'kolorist'
+import { blue, cyan, green, lightBlue, lightGreen } from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -10,7 +10,8 @@ export const FRAMEWORKS: Framework[] = [
     templates: [
       {
         name: 'vue-ts-starter-template',
-        display: 'Vue + TypeScript + Naive UI + TailwindCSS',
+        display:
+          'Vue TypeScript Starter Template (Vue + TypeScript + Naive UI + TailwindCSS)',
         color: green
       }
     ]
@@ -22,7 +23,8 @@ export const FRAMEWORKS: Framework[] = [
     templates: [
       {
         name: 'react-ts-starter-template',
-        display: 'React + TypeScript + antd + TailwindCSS',
+        display:
+          'React TypeScript Starter Template (React + TypeScript + antd + TailwindCSS)',
         color: blue
       }
     ]
@@ -34,8 +36,21 @@ export const FRAMEWORKS: Framework[] = [
     templates: [
       {
         name: 'nuxt-ts-starter-template',
-        display: 'Nuxt + TypeScript + TailwindCSS',
+        display:
+          'Nuxt TypeScript Starter Template (Nuxt + TypeScript + TailwindCSS)',
         color: lightGreen
+      }
+    ]
+  },
+  {
+    name: 'rspress',
+    display: 'Rspress',
+    color: lightBlue,
+    templates: [
+      {
+        name: 'rspress-starter-template',
+        display: 'Rspress Starter Template (Rspress + TypeScript)',
+        color: lightBlue
       }
     ]
   }

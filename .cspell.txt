@@ -2,6 +2,7 @@ antd
 brucesong
 chakra
 commitlint
+commitlintrc
 degit
 esbuild
 greenkeeper
@@ -11,6 +12,7 @@ nuxt
 plusplus
 preinstall
 recallwei
+rspress
 tailwindcss
 typecheck
 unocss

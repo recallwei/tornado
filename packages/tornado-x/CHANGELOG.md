@@ -1,5 +1,17 @@
 # tornado-x
 
+## 0.0.12
+
+### Patch Changes
+
+- fix bug
+
+## 0.0.11
+
+### Patch Changes
+
+- add rspress template
+
 ## 0.0.10
 
 ### Patch Changes

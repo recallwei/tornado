@@ -1,6 +1,6 @@
 {
   "name": "tornado-x",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "description": "Add engineering suites for your projects.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
@@ -40,9 +40,9 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@types/cross-spawn": "^6.0.3",
+    "@types/cross-spawn": "^6.0.4",
     "@types/degit": "^2.8.4",
-    "@types/prompts": "^2.4.6",
+    "@types/prompts": "^2.4.7",
     "commander": "^11.1.0",
     "cross-fetch": "^4.0.0",
     "cross-spawn": "^7.0.3",

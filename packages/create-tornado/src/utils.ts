@@ -1,8 +1,12 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-export const formatTargetDir = (targetDir?: string) =>
-  targetDir?.trim().replace(/\/+$/g, '')
+export const formatTargetDir = (targetDir?: string) => {
+  if (!targetDir) {
+    return ''
+  }
+  return targetDir.trim().replace(/\/+$/g, '')
+}
 
 export function isEmptyDir(dirPath: string) {
   const files = fs.readdirSync(dirPath)
@@ -26,7 +30,7 @@ export const isValidPackageName = (projectName: string) =>
 
 export const toValidPackageName = (projectName: string) =>
   projectName
-    .trim()
+    ?.trim()
     .toLowerCase()
     .replace(/\s+/g, '-')
     .replace(/^[._]/, '')

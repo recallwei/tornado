@@ -1,6 +1,6 @@
 {
   "name": "create-tornado",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "A CLI tool for scaffolding a project from an opinionated template for popular frameworks.",
   "author": "Bruce Song <recall4056@gmail.com> (https://github.com/recallwei/)",
   "repository": {
@@ -32,10 +32,10 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "@types/cross-spawn": "^6.0.3",
-    "@types/degit": "^2.8.4",
-    "@types/minimist": "^1.2.3",
-    "@types/prompts": "^2.4.6",
+    "@types/cross-spawn": "^6.0.4",
+    "@types/degit": "^2.8.5",
+    "@types/minimist": "^1.2.4",
+    "@types/prompts": "^2.4.7",
     "cross-spawn": "^7.0.3",
     "degit": "^2.8.4",
     "kolorist": "^1.8.0",
