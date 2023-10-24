@@ -1,5 +1,11 @@
 # create-tornado
 
+## 0.0.20
+
+### Patch Changes
+
+- fix type bug
+
 ## 0.0.19
 
 ### Patch Changes

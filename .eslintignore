@@ -1,3 +1,4 @@
 .husky
 pnpm-lock.yaml
 docs
+dist

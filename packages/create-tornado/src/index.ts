@@ -47,8 +47,8 @@ async function init() {
           name: 'projectName',
           message: reset('Project name:'),
           initial: DEFAULT_TARGET_DIR,
-          onState: (state: string) => {
-            targetDir = formatTargetDir(state) ?? DEFAULT_TARGET_DIR
+          onState: ({ value }) => {
+            targetDir = formatTargetDir(value as string) ?? DEFAULT_TARGET_DIR
           }
         },
         {
