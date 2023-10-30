@@ -1,4 +1,4 @@
-import { blue, cyan, green, lightBlue, lightGreen } from 'kolorist'
+import { blue, cyan, green, lightBlue, lightGreen, lightRed } from 'kolorist'
 
 import type { Framework } from './types'
 
@@ -51,6 +51,19 @@ export const FRAMEWORKS: Framework[] = [
         name: 'rspress-starter-template',
         display: 'Rspress Starter Template (Rspress + TypeScript)',
         color: lightBlue
+      }
+    ]
+  },
+  {
+    name: 'nest',
+    display: 'Nest',
+    color: lightRed,
+    templates: [
+      {
+        name: 'nest-ts-starter-template',
+        display:
+          'Nest TypeScript Starter Template (Nest + TypeScript + Prisma + PostgreSQL)',
+        color: lightRed
       }
     ]
   }
