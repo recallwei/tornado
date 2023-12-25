@@ -34,8 +34,8 @@ export const FRAMEWORKS: Framework[] = [
     templates: [
       {
         name: 'next-starter',
-        display: 'Next TypeScript Starter (Nuxt + TypeScript + TailwindCSS)',
-        color: lightGreen
+        display: 'Next TypeScript Starter (Next + TypeScript + TailwindCSS)',
+        color: lightBlue
       }
     ]
   },
