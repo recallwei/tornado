@@ -24,20 +24,20 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.3.8"
+    "vue": "^3.3.13"
   },
   "devDependencies": {
-    "@brucesong/eslint-config-ts": "^1.0.15",
-    "@changesets/cli": "^2.26.2",
-    "@commitlint/cli": "^18.4.2",
-    "@commitlint/config-conventional": "^18.4.2",
+    "@brucesong/eslint-config-ts": "^1.0.17",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "commitizen": "^4.3.0",
-    "cspell": "^8.0.0",
-    "cz-git": "^1.7.1",
-    "eslint": "^8.54.0",
+    "cspell": "^8.2.3",
+    "cz-git": "^1.8.0",
+    "eslint": "^8.56.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
     "tornado-x": "workspace:^",
     "unbuild": "^2.0.0"
   },

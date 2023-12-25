@@ -4,28 +4,38 @@ import type { Framework } from './types'
 
 export const FRAMEWORKS: Framework[] = [
   {
-    name: 'vue',
-    display: 'Vue',
-    color: green,
-    templates: [
-      {
-        name: 'vue-ts-starter-template',
-        display:
-          'Vue TypeScript Starter Template (Vue + TypeScript + Naive UI + TailwindCSS)',
-        color: green
-      }
-    ]
-  },
-  {
     name: 'react',
     display: 'React',
     color: cyan,
     templates: [
       {
-        name: 'react-ts-starter-template',
-        display:
-          'React TypeScript Starter Template (React + TypeScript + antd + TailwindCSS)',
+        name: 'react-starter',
+        display: 'React TypeScript Starter (React + TypeScript + antd + TailwindCSS)',
         color: blue
+      }
+    ]
+  },
+  {
+    name: 'vue',
+    display: 'Vue',
+    color: green,
+    templates: [
+      {
+        name: 'vue-starter',
+        display: 'Vue TypeScript Starter (Vue + TypeScript + Naive UI + TailwindCSS)',
+        color: green
+      }
+    ]
+  },
+  {
+    name: 'next',
+    display: 'Next',
+    color: lightBlue,
+    templates: [
+      {
+        name: 'next-starter',
+        display: 'Next TypeScript Starter (Nuxt + TypeScript + TailwindCSS)',
+        color: lightGreen
       }
     ]
   },
@@ -35,9 +45,8 @@ export const FRAMEWORKS: Framework[] = [
     color: lightGreen,
     templates: [
       {
-        name: 'nuxt-ts-starter-template',
-        display:
-          'Nuxt TypeScript Starter Template (Nuxt + TypeScript + TailwindCSS)',
+        name: 'nuxt-starter',
+        display: 'Nuxt TypeScript Starter (Nuxt + TypeScript + TailwindCSS)',
         color: lightGreen
       }
     ]
@@ -48,8 +57,8 @@ export const FRAMEWORKS: Framework[] = [
     color: lightBlue,
     templates: [
       {
-        name: 'rspress-starter-template',
-        display: 'Rspress Starter Template (Rspress + TypeScript)',
+        name: 'rspress-starter',
+        display: 'Rspress Starter (Rspress + TypeScript)',
         color: lightBlue
       }
     ]
@@ -60,17 +69,17 @@ export const FRAMEWORKS: Framework[] = [
     color: lightRed,
     templates: [
       {
-        name: 'nest-ts-starter-template',
-        display:
-          'Nest TypeScript Starter Template (Nest + TypeScript + Prisma + PostgreSQL)',
+        name: 'nest-starter',
+        display: 'Nest TypeScript Starter (Nest + TypeScript + Prisma + PostgreSQL)',
         color: lightRed
       }
     ]
   }
 ]
 
-export const TEMPLATES = FRAMEWORKS.map(
-  (f) => f.templates?.map((t) => t.name) || [f.name]
-).reduce((a, b) => a.concat(b), [])
+export const TEMPLATES = FRAMEWORKS.map((f) => f.templates?.map((t) => t.name) || [f.name]).reduce(
+  (a, b) => a.concat(b),
+  []
+)
 
 export const DEFAULT_TARGET_DIR = 'tornado-app'
